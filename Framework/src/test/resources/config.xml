@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Environment>
+  <Variable>
+    <Name>timeout</Name>
+    <Value>600000</Value>
+  </Variable>
+  <Variable>
+    <Name>FSM_OBJ_TIME_OUT</Name>
+    <Value>180</Value>
+  </Variable>
+  <Variable>
+    <Name>OIM</Name>
+    <Value>https://slc11mei.dev.oraclecorp.com:4443/oim</Value>
+  </Variable>
+<Variable>
+    <Name>APM</Name>
+    <Value>http://slc11mei.dev.oraclecorp.com:10613/apm</Value>
+  </Variable>
+<Variable>
+  <Name>browser</Name>
+  <Value>CHROME</Value>
+</Variable>
+<Variable>
+  <Name>browserSize</Name>
+  <Value>maximised</Value>
+</Variable>
+<Variable>
+  <Name>Unified_HomePage</Name> 
+  <!--<Value>https://fuscdrmsmc262-fa-ext.us.oracle.com/fscmUI/faces/FuseWelcome</Value>-->
+  <!--<Value>https://fuscdrmsmc222-login.us.oracle.com/</Value> -->
+ <!--<Value>https://fuscdrmsmc357-fa-ext.us.oracle.com/hcmUI/faces/FuseWelcome</Value>-->
+  <!--<Value>https://fuscdrmsmc209-login.us.oracle.com/</Value>-->
+  <!--<Value>https://fuscdrmsmc363-login.us.oracle.com/</Value>-->
+<!-- <Value>https://fuscdrmsmc222-fa-ext.us.oracle.com/hcmUI/faces/FuseWelcome</Value>-->
+  <Value>https://fuscdrmsmc167-fa-ext.us.oracle.com/homePage/faces/FuseWelcome</Value>
+  <!--<Value>https://hcmqa.fa.us1.oraclecloud.com/homePage/faces/FuseWelcome</Value>-->
+</Variable>
+  <Variable>
+    <Name>Core_ATKHomePage</Name>
+    <Value>https://slc11mei.dev.oraclecorp.com:10614/homePage/faces/AtkHomePageWelcome</Value>
+  </Variable>
+<Variable>
+    <Name>Password</Name>
+    <Value></Value>
+  </Variable>
+<Variable>
+    <Name>UCM_Url</Name>
+    <Value>http://slc11mei.dev.oraclecorp.com:7012/cs</Value>
+</Variable>
+<Variable>
+    <Name>Fuse_HomePage</Name>
+    <Value>https://slc11mei.dev.oraclecorp.com:10614/homePage/faces/FuseWelcome</Value>
+  </Variable>
+   <Variable>
+    <Name>HCM_Worklist_Application</Name>
+    <Value>https://slc11mei.dev.oraclecorp.com/integration:10614/worklistapp/</Value>
+  </Variable>
+   <Variable>
+    <Name>VAR_NUM_SUFF</Name> 
+    <Value>38</Value>
+  </Variable>
+  <Variable>
+    <Name>TenantName</Name>
+    <Value></Value>
+  </Variable>
+<Variable>
+    <Name>Verbose</Name>
+    <Value>true</Value>
+</Variable>
+  <Variable>
+    <Name>ReleaseFolder</Name>
+    <Value>Release</Value>
+  </Variable>
+  <Variable>
+    <Name>ObjectLibraryFolder</Name>
+    <Value>Release</Value>
+  </Variable>
+  <Variable>
+    <Name>ScriptDataFolder</Name>
+    <Value>Release</Value>
+  </Variable>
+<Variable>
+    <Name>XmlSuffix</Name>
+    <Value></Value>
+  </Variable>
+  <Variable>
+    <Name>Host</Name>
+    <Value>https://slc11mei.dev.oraclecorp.com</Value>
+  </Variable>
+  <Variable>
+    <Name>HcmAbsencesApp</Name>
+    <Value>9462</Value>
+  </Variable>
+  <Variable>
+    <Name>HcmBenefitsApp</Name>
+    <Value>9410</Value>
+  </Variable>
+  <Variable>
+    <Name>HcmCompensationApp</Name>
+    <Value>9408</Value>
+  </Variable>
+  <Variable>
+    <Name>HcmCoreSetupApp</Name>
+    <Value>9406</Value>
+  </Variable>
+  <Variable>
+    <Name>HcmPayrollApp</Name>
+    <Value>9412</Value>
+  </Variable>
+  <Variable>
+    <Name>HcmTalentApp</Name>
+    <Value>9414</Value>
+  </Variable>
+<Variable>
+  <Name>CookieFlag</Name>
+  <Value>N</Value>
+</Variable>
+ <Variable>
+  <Name>COOKIE_URL</Name>
+  <Value>http://www-apps-fusion.us.oracle.com:7500/cgi-bin/tpmfa/setcookie.pl</Value>
+</Variable> 
+<Variable>
+  <Name>HCM_HOST</Name>
+  <Value>https://slc11mei.dev.oraclecorp.com</Value>
+</Variable>
+</Environment>

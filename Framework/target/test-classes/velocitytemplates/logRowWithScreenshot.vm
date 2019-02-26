@@ -1,0 +1,7 @@
+<tr class=$className>
+    <td>$command</td>
+    <td>$description</td>
+    <td> <br/>
+        <a href='screenshots/screenshot${imageCounter}.png'>Screenshot</a><br/>
+    </td>
+</tr>
