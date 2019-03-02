@@ -9,6 +9,7 @@
           <include name="initTestContext"/>
           <include name="login"/>
           <include name="beforeSuite"/>
+          <include name="login2"/>
         </methods>
       </class> <!-- com.app.webdriver.testcases.cmp.Test1 -->
     </classes>

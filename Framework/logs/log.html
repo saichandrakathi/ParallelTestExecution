@@ -1,0 +1,180 @@
+<html>
+    <style>
+    table {
+        margin:0 auto;
+        width:100%;
+        min-width:1300px;
+        max-width:1600px;
+    }
+    td {border-top: 1px solid grey;}
+    td:first-child {width:120px;}
+    td:nth-child(2) {word-break: break-all;}
+    pre {white-space: pre-wrap;}
+    td:nth-child(3){width:100px;}
+    tr.success{color:black;background-color:#CCFFCC;}
+    tr.warning{color:black;background-color:#FEE01E;}
+    tr.error{color:black;background-color:#FFCCCC;}
+    tr.info{color:white;background-color:#78a1c0}
+    tr.step{color:white;background:grey}
+    </style>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+        <script>
+            $(function() {
+                $('.info').hide();
+                $('.stacktrace').hide();
+                $("table").click(function(event) {
+                    event.stopPropagation();
+                    var $target = $(event.target);
+                    if ($target.closest("tr").attr("class") == "error stacktrace" ) {
+                        $target.closest("tr").slideUp();
+                    } else if ($target.closest("tr").next("tr").attr("class") == "error stacktrace") {
+                        $target.closest("tr").next("tr").slideToggle();
+                    }
+                });
+            });
+        </script>
+        <p>Date: 2019-03-02T07:52:14+00:00 </p>
+        <p>Polish Time: 02/03/2019 08:52:14 +01:00 </p>
+        <p>Browser: CHROME</p>
+        <p>OS: Mac OS X </p>
+        <p>Testing environment: https://fuscdrmsmc108-fa-ext.us.oracle.com/homePage/faces/FuseWelcome </p>
+        <p>Testing environment: $testingEnvironment </p>
+        <p>Tested version: TO DO: GET WIKI VERSION HERE</p>
+        <div id='toc'></div>
+
+<button id="hideLowLevel">hide low level actions</button>
+<button id="showLowLevel">show low level actions</button>
+
+<script>
+function createToc()
+{
+	var h1 = $('td h1');
+	var l = h1.length;
+	var toc = "<ul>";
+	for (var i=0; i<l; i++){
+		var ident = "toc"+i;
+		var tr = h1[i].parentNode.parentNode;
+		h1[i].setAttribute('id', ident);
+		if (tr.style.backgroundColor == "red")
+		{
+			var temp = "<li><a style=\"color:red;\" href='#" + ident + "' >" + h1[i].textContent + "</a></li>";
+		}
+		else
+		{
+			var temp = "<li><a href='#" + ident + "' >" + h1[i].textContent + "</a></li>";
+		}
+		toc += temp;
+	}
+	toc+="</ul>";
+	var tocWrapper = document.getElementById('toc');
+	console.log(toc);
+	tocWrapper.innerHTML += toc;
+}
+function markMethodAsFailed() {
+	var a = $('table tr.error').parent();
+	var l = a.length;
+	for (var i=0; i<l; i++)
+	{
+		var b = a[i].children[0];
+		b.style.backgroundColor = "red";
+	}
+}
+function addLinkBackToTheJob() {
+	if (location.pathname.indexOf('/job/') > -1) {
+		var jobPath = location.pathname.replace(/(\/job\/[^/]*)\/.*$/, '$1'),
+			$a = $('<a></a>').attr('href', jobPath).text('Back to job'),
+			$a = $a.wrap('<p></p>');
+			$p = $('p').first();
+		$p.before($a);
+	}
+}
+
+$(document).ready(function () {
+	markMethodAsFailed();
+	createToc();
+	addLinkBackToTheJob();
+});
+
+(function (ctx) {
+    var hideButton, showButton, document;
+    document = ctx.document;
+    hideButton = document.getElementById('hideLowLevel');
+    showButton = document.getElementById('showLowLevel');
+
+    function manageActions(direction) {
+        // get all elements with class lowLevelAction
+        var elements = document.getElementsByClassName("info");
+        for (var i = 0; i < elements.length; i++) {
+            if (direction === 'hide') {
+                //hide lowLevelActions
+                elements[i].style.display = "none";
+            } else if (direction === 'show') {
+                //show lowLevelActions
+                elements[i].style.display = "";
+            }
+        }
+    }
+    hideButton.addEventListener('click', function () {
+        manageActions('hide');
+    }, false);
+    showButton.addEventListener('click', function () {
+        manageActions('show');
+    }, false);
+}(this));
+</script>
+<table><h1>Class: <em>com.app.webdriver.testcases.cmp.Test1.login</em></h1>
+    <tr class="step">
+        <td></td>
+        <td><h1><em>login</em></h1></td>
+        <td> <br/> &nbsp;</td>
+    </tr>
+
+<table><h1>Class: <em>com.app.webdriver.testcases.cmp.Test1.login2</em></h1>
+    <tr class="step">
+        <td></td>
+        <td><h1><em>login2</em></h1></td>
+        <td> <br/> &nbsp;</td>
+    </tr>
+
+<tr class="info">
+    <td>Using chromedriver: </td>
+    <td>/Users/skathi/git/ParallelTestExecution/Framework/target/test-classes/ChromeDriver/chromedriver_mac64/chromedriver</td>
+    <td> <br/> &nbsp;</td>
+</tr>
+
+<tr class="info">
+    <td>Using chromedriver: </td>
+    <td>/Users/skathi/git/ParallelTestExecution/Framework/target/test-classes/ChromeDriver/chromedriver_mac64/chromedriver</td>
+    <td> <br/> &nbsp;</td>
+</tr>
+
+<tr class="success">
+    <td>Navigate to</td>
+    <td><a href="https://fuscdrmsmc108-fa-ext.us.oracle.com/homePage/faces/FuseWelcome">https://fuscdrmsmc108-fa-ext.us.oracle.com/homePage/faces/FuseWelcome</a>
+</td>
+    <td> <br/> &nbsp;</td>
+</tr>
+
+<tr class="success">
+    <td>Navigate to</td>
+    <td><a href="https://fuscdrmsmc108-fa-ext.us.oracle.com/homePage/faces/FuseWelcome">https://fuscdrmsmc108-fa-ext.us.oracle.com/homePage/faces/FuseWelcome</a>
+</td>
+    <td> <br/> &nbsp;</td>
+</tr>
+
+<tr class="info">
+    <td>INFO</td>
+    <td>NO ALERT PRESENT</td>
+    <td> <br/> &nbsp;</td>
+</tr>
+
+<tr class="warning">
+    <td>Url after navigation</td>
+    <td>https://fuscdrmsmc108-login.us.oracle.com/oam/server/obrareq.cgi?encquery%3DY9%2BU15po4JWd8qox%2FGI9rLCgSLb4nYVchk3fO2PoXeT2iO2SPkIAq9IlE3BpTRzPUiEX2qGfZgBCNjI779xHK9p86tWIlIXePhc9mGlFbYGjqVRQJdLkY%2FE5G8uPB7aMCf3lLJah5ZiHFvP48C3ED8i%2FSNk%2B9jPZOI%2BnRNTqxgMaugykrzQ%2BwQHVG%2BYUk6eipEPiOjLQzO87D1hmP%2BMKi00ADouP0SZ2mT6G0%2B8wVgkd06sKzbwqEWOjhUNFVKHefmTGN4qjN9oDuK0ihDFr2WrvFOFzXp770U22Y7q3woLxO%2BU2S5AYpr6zZnQYamrU5%2BHcybwBPlK7cKx32I3EgI1icmciTjyUu5AJ1BP5J6q7CvWnNw8Q9S8mAOUSgNqsdrQbTy4TfCe%2Bjq5l1lWlqsLkYY9hPX53aaaDrmcadgUhXyA3oOXC1ZjUe9%2FATyi9PF4kltw%2BQXztVeqVD9rlhw%2FaRIlzVIF892fN2yqYn2c8QbDh2ZxaX1BklL1W%2FWX%2B%20agentid%3DOraFusionApp_11AG%20ver%3D1%20crmethod%3D2%26cksum%3D80b3b914338e29a44df80facea300b1b69d67057&ECID-Context=1.005WlVEao9u7i4K5IVS4yf0001270001uV%3BkXjE</td>
+    <td> <br/> &nbsp;</td>
+</tr>
+

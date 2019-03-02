@@ -43,7 +43,7 @@ public class TestTemplate {
 
 	@BeforeMethod(alwaysRun = true)
 	public void initTestContext(Method method) {
-		
+		DriverProvider.ACTIVE_BROWSER_INDEX.set(0);
 		TestContext.writeMethodName(method);
 		Log.startTest(method);
 
@@ -129,8 +129,8 @@ public class TestTemplate {
 	}
 
 
+	//@AfterMethod(alwaysRun = true)
 	@AfterMethod(alwaysRun = true)
-	@AfterClass(alwaysRun = true)
 	public void stop() {
 		DriverProvider.close();
 	}

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="3" parallel="methods" name="Failed suite [TestSuite]" guice-stage="DEVELOPMENT">
-  <test thread-count="3" parallel="methods" name="testGuru(failed)">
+  <test thread-count="3" parallel="methods" name="Sample(failed)">
     <classes>
       <class name="com.app.webdriver.testcases.cmp.Test1">
         <methods>
@@ -12,5 +12,5 @@
         </methods>
       </class> <!-- com.app.webdriver.testcases.cmp.Test1 -->
     </classes>
-  </test> <!-- testGuru(failed) -->
+  </test> <!-- Sample(failed) -->
 </suite> <!-- Failed suite [TestSuite] -->
